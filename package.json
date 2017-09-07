@@ -1,0 +1,23 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "todo list - danielmonk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielmonk/todo.git"
+  },
+  "author": "danielmonk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielmonk/todo/issues"
+  },
+  "homepage": "https://github.com/danielmonk/todo#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
