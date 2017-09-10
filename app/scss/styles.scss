@@ -1,24 +1,28 @@
-$dm-purple: #5031a9;
+$dm-purple: #7346F3;
 $dm-green: #00FF00;
 $dm-red: #CF2323;
 
 
 body{
-    background:$dm-purple;
-    height:100vh;
-    header{
-        padding:15px 0;
-        .logo{
-            max-width:175px;
+    background: #ffbad8; /* Old browsers */
+    background: -webkit-linear-gradient(bottom left, #ffbad8 0%, #bdbfff 100%);
+    background: -moz-linear-gradient(bottom left, #ffbad8 0%, #bdbfff 100%);
+    background: -o-linear-gradient(bottom left, #ffbad8 0%, #bdbfff 100%);
+    background: linear-gradient(to top right, #ffbad8 0%, #bdbfff 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbad8', endColorstr='#bdbfff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+      &#padding{
+        padding:5% 0;
+      }
+    
+    #app{
+      background: #fff;
+      box-shadow: 0px 5px 40px 1px #aaa;
+      border-radius: 5px;
+        .avatar{
+            img{
+              max-width:100px;
+            }
         }
-    }
-    #intro{
-        .title{
-            color:#fff;
-            text-align:center;
-        }
-    }
-    #list{
         ul {
             margin: 0;
             padding: 0;
@@ -103,14 +107,14 @@ body{
             & > input[type="text"] {
               }
             & > .delete{
-                background-color:$dm-red;
+                background-color:-red;
                 padding:22px;
                 margin:0 5px;
                 &:before, &:after{
                     background-color:#fff;
                 }
                 &:hover {
-                    background-color:$dm-green;
+                    background-color:-green;
                 }
               }
             
@@ -119,7 +123,7 @@ body{
           /* Completed */
           #completed-tasks label {
             text-decoration: line-through;
-            color: $dm-green;
+            color: -green;
           }
           
           /* Edit Task */
