@@ -7,6 +7,9 @@
   background-repeat: no-repeat;
   background-position: center; }
 
+html {
+  height: 100%; }
+
 body {
   background: #ffbad8;
   /* Old browsers */
@@ -19,7 +22,7 @@ body {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbad8', endColorstr='#bdbfff',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
-  height: 100vh; }
+  min-height: 100%; }
   body#padding {
     padding: 5% 0; }
   body #app {
