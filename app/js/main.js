@@ -22,8 +22,7 @@ var createNewTaskElement = function(taskString) {
   //button.delete
   var deleteButton = document.createElement("button");
   
-      //Each element needs modifying
-  
+//Each element needs modifying
   checkBox.type = "checkbox";
   editInput.type = "text";
   
@@ -120,7 +119,7 @@ var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
   var deleteButton = taskListItem.querySelector("button.delete");
   
   //bind editTask to edit button
-  //editButton.onclick = editTask;
+  editButton.onclick = editTask;
   
   //bind deleteTask to delete button
   deleteButton.onclick = deleteTask;

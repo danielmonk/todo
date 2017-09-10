@@ -18,7 +18,8 @@ body {
   /* Chrome10-25,Safari5.1-6 */
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbad8', endColorstr='#bdbfff',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */ }
+  /* IE6-9 fallback on horizontal gradient */
+  height: 100vh; }
   body#padding {
     padding: 5% 0; }
   body #app {
@@ -30,10 +31,16 @@ body {
     /* Task list */
     /* Completed */
     /* Edit Task */ }
+    @media screen and (max-width: 1067px) {
+      body #app {
+        margin: 0 5%; } }
     body #app .column.border-right {
       border-right: 1px solid #eee; }
     body #app #sidebar {
       padding: 15px 10px 15px 20px; }
+      @media screen and (max-width: 992px) {
+        body #app #sidebar {
+          padding: 15px 20px; } }
       body #app #sidebar .avatar img, body #app #sidebar .avatar h3 {
         display: inline-block; }
       body #app #sidebar .avatar img {
@@ -60,15 +67,24 @@ body {
     body #app #header-image {
       padding-right: 12px;
       position: relative; }
+      @media screen and (max-width: 992px) {
+        body #app #header-image {
+          padding: 0 12px; } }
       body #app #header-image .background_cover {
         height: 200px;
         border-radius: 0 5px 0 0; }
+        @media screen and (max-width: 992px) {
+          body #app #header-image .background_cover {
+            border-radius: 0px; } }
       body #app #header-image .info {
         position: absolute;
         color: #fff;
         z-index: 10;
         bottom: 15px;
         left: 15px; }
+        @media screen and (max-width: 992px) {
+          body #app #header-image .info {
+            left: 25px; } }
         body #app #header-image .info h2 {
           font-size: 30px; }
         body #app #header-image .info p {
@@ -84,22 +100,9 @@ body {
         body #app #task-list #add-tasks-wrap input, body #app #task-list #incomplete-tasks-wrap input, body #app #task-list #completed-tasks-wrap input {
           border: 1px solid #aeaeae; }
         body #app #task-list #add-tasks-wrap li input, body #app #task-list #incomplete-tasks-wrap li input, body #app #task-list #completed-tasks-wrap li input {
-          border: 1px solid #aeaeae;
-          display: none; }
+          border: 1px solid #aeaeae; }
           body #app #task-list #add-tasks-wrap li input[type=checkbox] + label, body #app #task-list #incomplete-tasks-wrap li input[type=checkbox] + label, body #app #task-list #completed-tasks-wrap li input[type=checkbox] + label {
             font-size: 20px; }
-            body #app #task-list #add-tasks-wrap li input[type=checkbox] + label:before, body #app #task-list #incomplete-tasks-wrap li input[type=checkbox] + label:before, body #app #task-list #completed-tasks-wrap li input[type=checkbox] + label:before {
-              content: "\f10c";
-              font-size: 16px;
-              color: #ccc;
-              font-family: 'FontAwesome';
-              display: inline-block;
-              margin-right: 10px; }
-          body #app #task-list #add-tasks-wrap li input[type=checkbox]:checked + label:before, body #app #task-list #incomplete-tasks-wrap li input[type=checkbox]:checked + label:before, body #app #task-list #completed-tasks-wrap li input[type=checkbox]:checked + label:before {
-            content: "\f05d";
-            color: #34da67;
-            font-family: 'FontAwesome';
-            display: inline-block; }
         body #app #task-list #add-tasks-wrap li button.edit, body #app #task-list #incomplete-tasks-wrap li button.edit, body #app #task-list #completed-tasks-wrap li button.edit {
           background: #e58d3f;
           opacity: 0.75;
