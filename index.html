@@ -17,34 +17,53 @@
     <div class="container">
 
       <section id="app">
-        <div class="columns">
-          <div class="column is-4">
+        <div class="columns is-multiline">
+          <div class="column is-one-quarter">
             <div id="sidebar">
-              <div class="logo">
-                <img src="dist/images/danielmonk-logo-v2.png">
+              <div class="avatar aligner">
+                <img src="app/images/danielmonk-avatar.png">
+                <h3 class="name">Daniel Monk</h3>
+              </div>
+              <div class="list-items aligner">
+                <ul>
+                  <li>To-Do</li>
+                </ul>
               </div>
             </div>
           </div>
-          <div class="column is-4">
+          <div class="column">
+          <div class="columns is-multiline">
+            <div class="column is-12 is-paddingless">
+              <div id="header-image">
+                <div class="background_cover" style="background-image: url('app/images/danielmonk-list-bg.jpg');"></div>
+                <div class="info">
+                  <h2>My Day</h2>
+                  <p id="date"></p>
+                </div>
+              </div>
+            </div>
+            <div class="column is-half">
               <div id="add-tasks">
                 <p><label for="new-task">Add Item</label><input id="new-task" type="text"><button>Add</button></p>
               </div>
-          </div>
-          <div class="column is=4">
+            </div>
+            <div class="column is-half">
               <div id="task-list">
                 <h3>Todo</h3>
                 <ul id="incomplete-tasks">
                   <li><input type="checkbox"><label>Pay Bills</label><input type="text"><button class="edit">Edit</button><button class="delete"></button></li>
                   <li class="editMode"><input type="checkbox"><label>Go Shopping</label><input type="text" value="Go Shopping"><button class="edit">Edit</button><button class="delete"></button></li> 
                 </ul>
-                
+    
                 <h3>Completed</h3>
                 <ul id="completed-tasks">
                   <li><input type="checkbox" checked><label>See the Doctor</label><input type="text"><button class="edit">Edit</button><button class="delete"></button></li>
                 </ul>
               </div>
             </div>
-        </div>
+          </div>
+          </div>
+          </div>
       </section>
 
       <footer>
