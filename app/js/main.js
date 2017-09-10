@@ -29,7 +29,6 @@ var createNewTaskElement = function(taskString) {
   
   editButton.innerText = "Edit";
   editButton.className = "edit";
-  deleteButton.innerText = "Delete";
   deleteButton.className = "delete";
   
   label.innerText = taskString;

@@ -27,8 +27,13 @@ body{
       background: #fff;
       box-shadow: 0px 5px 40px 1px #aaa;
       border-radius: 5px;
+      .column{
+        &.border-right{
+          border-right:1px solid #eee;
+        }
+      }
       #sidebar{
-        padding:15px 30px;
+        padding:15px 10px 15px 20px;
           .avatar{
               img, h3{
                 display:inline-block;
@@ -41,10 +46,17 @@ body{
               }
           }
           .list-items{
-            margin-top:15px;
+            margin-top:30px;
             ul{
+              width:100%;
               li{
+                width:100%;
                 font-size:16px;
+                padding:5px 10px;
+                &.active{
+                  background:#F3F6FF;
+                  border-radius:5px;
+                }
                 &:before{
                   content:'\f274';
                   font-family:'FontAwesome';
@@ -60,7 +72,7 @@ body{
           padding-right:12px;
           position: relative;
           .background_cover{
-            height:250px;
+            height:200px;
             border-radius:0 5px 0 0;
           }
           .info{
@@ -73,7 +85,78 @@ body{
               font-size:30px;
             }
             p{
-              font-size:24px;
+              font-size:20px;
+              opacity:0.75;
+            }
+          }
+        }
+        #task-list{
+          padding:0px 50px;
+          margin-right:12px;
+          #add-tasks-wrap, #incomplete-tasks-wrap, #completed-tasks-wrap{
+            margin:25px 0;
+            padding-bottom:25px;
+            border-bottom:1px solid #eee;
+            li{
+              input{
+                border:1px solid #aeaeae;
+                &[type=checkbox]{
+                  display:none;
+                }
+              }
+              label{
+                font-size:20px;
+                &:before{
+                  content: "\f10c";
+                  font-size: 16px;
+                  color: #ccc;
+                  font-family: 'FontAwesome';
+                  display: inline-block;
+                  margin-right: 10px;
+                }
+              }
+              button{
+                &.edit{
+                  background:#e58d3f;
+                  opacity:0.75;
+                  color:#fff;
+                  &:hover{
+                    opacity:1;
+                  }
+                }
+                &.delete{
+                  background:#e53f3f;
+                  opacity:0.75;
+                  color:#fff;
+                  &:hover{
+                    opacity:1;
+                  }
+                }
+              }
+            }
+          }
+          #add-tasks-wrap{
+            input{  
+              width:70%;
+            }
+            button{
+              background:#34da67;
+              opacity:0.75;
+              color:#fff;
+              &:hover{
+                opacity:1;
+              }         
+            }
+          }
+          #incomplete-tasks-wrap{
+            input[type=text], label{
+              width:70%;
+            }
+          }
+          #completed-tasks-wrap{
+            border-bottom:0px;
+            label{
+              margin-right:10px;
             }
           }
         }
@@ -163,9 +246,6 @@ body{
                 margin:0 5px;
                 &:before, &:after{
                     background-color:#fff;
-                }
-                &:hover {
-                    background-color:-green;
                 }
               }
             

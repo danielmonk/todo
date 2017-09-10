@@ -30,8 +30,10 @@ body {
     /* Task list */
     /* Completed */
     /* Edit Task */ }
+    body #app .column.border-right {
+      border-right: 1px solid #eee; }
     body #app #sidebar {
-      padding: 15px 30px; }
+      padding: 15px 10px 15px 20px; }
       body #app #sidebar .avatar img, body #app #sidebar .avatar h3 {
         display: inline-block; }
       body #app #sidebar .avatar img {
@@ -39,20 +41,27 @@ body {
       body #app #sidebar .avatar h3 {
         margin: 0 15px; }
       body #app #sidebar .list-items {
-        margin-top: 15px; }
-        body #app #sidebar .list-items ul li {
-          font-size: 16px; }
-          body #app #sidebar .list-items ul li:before {
-            content: '\f274';
-            font-family: 'FontAwesome';
-            font-size: 22px;
-            margin-right: 10px;
-            color: #ED8A8F; }
+        margin-top: 30px; }
+        body #app #sidebar .list-items ul {
+          width: 100%; }
+          body #app #sidebar .list-items ul li {
+            width: 100%;
+            font-size: 16px;
+            padding: 5px 10px; }
+            body #app #sidebar .list-items ul li.active {
+              background: #F3F6FF;
+              border-radius: 5px; }
+            body #app #sidebar .list-items ul li:before {
+              content: '\f274';
+              font-family: 'FontAwesome';
+              font-size: 22px;
+              margin-right: 10px;
+              color: #ED8A8F; }
     body #app #header-image {
       padding-right: 12px;
       position: relative; }
       body #app #header-image .background_cover {
-        height: 250px;
+        height: 200px;
         border-radius: 0 5px 0 0; }
       body #app #header-image .info {
         position: absolute;
@@ -63,7 +72,54 @@ body {
         body #app #header-image .info h2 {
           font-size: 30px; }
         body #app #header-image .info p {
-          font-size: 24px; }
+          font-size: 20px;
+          opacity: 0.75; }
+    body #app #task-list {
+      padding: 0px 50px;
+      margin-right: 12px; }
+      body #app #task-list #add-tasks-wrap, body #app #task-list #incomplete-tasks-wrap, body #app #task-list #completed-tasks-wrap {
+        margin: 25px 0;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #eee; }
+        body #app #task-list #add-tasks-wrap li input, body #app #task-list #incomplete-tasks-wrap li input, body #app #task-list #completed-tasks-wrap li input {
+          border: 1px solid #aeaeae; }
+          body #app #task-list #add-tasks-wrap li input[type=checkbox], body #app #task-list #incomplete-tasks-wrap li input[type=checkbox], body #app #task-list #completed-tasks-wrap li input[type=checkbox] {
+            display: none; }
+        body #app #task-list #add-tasks-wrap li label, body #app #task-list #incomplete-tasks-wrap li label, body #app #task-list #completed-tasks-wrap li label {
+          font-size: 20px; }
+          body #app #task-list #add-tasks-wrap li label:before, body #app #task-list #incomplete-tasks-wrap li label:before, body #app #task-list #completed-tasks-wrap li label:before {
+            content: "\f10c";
+            font-size: 16px;
+            color: #ccc;
+            font-family: 'FontAwesome';
+            display: inline-block;
+            margin-right: 10px; }
+        body #app #task-list #add-tasks-wrap li button.edit, body #app #task-list #incomplete-tasks-wrap li button.edit, body #app #task-list #completed-tasks-wrap li button.edit {
+          background: #e58d3f;
+          opacity: 0.75;
+          color: #fff; }
+          body #app #task-list #add-tasks-wrap li button.edit:hover, body #app #task-list #incomplete-tasks-wrap li button.edit:hover, body #app #task-list #completed-tasks-wrap li button.edit:hover {
+            opacity: 1; }
+        body #app #task-list #add-tasks-wrap li button.delete, body #app #task-list #incomplete-tasks-wrap li button.delete, body #app #task-list #completed-tasks-wrap li button.delete {
+          background: #e53f3f;
+          opacity: 0.75;
+          color: #fff; }
+          body #app #task-list #add-tasks-wrap li button.delete:hover, body #app #task-list #incomplete-tasks-wrap li button.delete:hover, body #app #task-list #completed-tasks-wrap li button.delete:hover {
+            opacity: 1; }
+      body #app #task-list #add-tasks-wrap input {
+        width: 70%; }
+      body #app #task-list #add-tasks-wrap button {
+        background: #34da67;
+        opacity: 0.75;
+        color: #fff; }
+        body #app #task-list #add-tasks-wrap button:hover {
+          opacity: 1; }
+      body #app #task-list #incomplete-tasks-wrap input[type=text], body #app #task-list #incomplete-tasks-wrap label {
+        width: 70%; }
+      body #app #task-list #completed-tasks-wrap {
+        border-bottom: 0px; }
+        body #app #task-list #completed-tasks-wrap label {
+          margin-right: 10px; }
     body #app ul {
       margin: 0;
       padding: 0; }
@@ -129,8 +185,6 @@ body {
         margin: 0 5px; }
         body #app li > .delete:before, body #app li > .delete:after {
           background-color: #fff; }
-        body #app li > .delete:hover {
-          background-color: -green; }
     body #app #completed-tasks label {
       text-decoration: line-through;
       color: -green; }
