@@ -81,19 +81,25 @@ body {
         margin: 25px 0;
         padding-bottom: 25px;
         border-bottom: 1px solid #eee; }
-        body #app #task-list #add-tasks-wrap li input, body #app #task-list #incomplete-tasks-wrap li input, body #app #task-list #completed-tasks-wrap li input {
+        body #app #task-list #add-tasks-wrap input, body #app #task-list #incomplete-tasks-wrap input, body #app #task-list #completed-tasks-wrap input {
           border: 1px solid #aeaeae; }
-          body #app #task-list #add-tasks-wrap li input[type=checkbox], body #app #task-list #incomplete-tasks-wrap li input[type=checkbox], body #app #task-list #completed-tasks-wrap li input[type=checkbox] {
-            display: none; }
-        body #app #task-list #add-tasks-wrap li label, body #app #task-list #incomplete-tasks-wrap li label, body #app #task-list #completed-tasks-wrap li label {
-          font-size: 20px; }
-          body #app #task-list #add-tasks-wrap li label:before, body #app #task-list #incomplete-tasks-wrap li label:before, body #app #task-list #completed-tasks-wrap li label:before {
-            content: "\f10c";
-            font-size: 16px;
-            color: #ccc;
+        body #app #task-list #add-tasks-wrap li input, body #app #task-list #incomplete-tasks-wrap li input, body #app #task-list #completed-tasks-wrap li input {
+          border: 1px solid #aeaeae;
+          display: none; }
+          body #app #task-list #add-tasks-wrap li input[type=checkbox] + label, body #app #task-list #incomplete-tasks-wrap li input[type=checkbox] + label, body #app #task-list #completed-tasks-wrap li input[type=checkbox] + label {
+            font-size: 20px; }
+            body #app #task-list #add-tasks-wrap li input[type=checkbox] + label:before, body #app #task-list #incomplete-tasks-wrap li input[type=checkbox] + label:before, body #app #task-list #completed-tasks-wrap li input[type=checkbox] + label:before {
+              content: "\f10c";
+              font-size: 16px;
+              color: #ccc;
+              font-family: 'FontAwesome';
+              display: inline-block;
+              margin-right: 10px; }
+          body #app #task-list #add-tasks-wrap li input[type=checkbox]:checked + label:before, body #app #task-list #incomplete-tasks-wrap li input[type=checkbox]:checked + label:before, body #app #task-list #completed-tasks-wrap li input[type=checkbox]:checked + label:before {
+            content: "\f05d";
+            color: #34da67;
             font-family: 'FontAwesome';
-            display: inline-block;
-            margin-right: 10px; }
+            display: inline-block; }
         body #app #task-list #add-tasks-wrap li button.edit, body #app #task-list #incomplete-tasks-wrap li button.edit, body #app #task-list #completed-tasks-wrap li button.edit {
           background: #e58d3f;
           opacity: 0.75;

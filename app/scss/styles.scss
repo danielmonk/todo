@@ -97,22 +97,35 @@ body{
             margin:25px 0;
             padding-bottom:25px;
             border-bottom:1px solid #eee;
+            input{
+                border: 1px solid #aeaeae;
+            }
             li{
               input{
                 border:1px solid #aeaeae;
+                display: none;
                 &[type=checkbox]{
-                  display:none;
-                }
-              }
-              label{
-                font-size:20px;
-                &:before{
-                  content: "\f10c";
-                  font-size: 16px;
-                  color: #ccc;
-                  font-family: 'FontAwesome';
-                  display: inline-block;
-                  margin-right: 10px;
+                  &+label{
+                    font-size:20px;
+                    &:before{
+                        content: "\f10c";
+                        font-size: 16px;
+                        color: #ccc;
+                        font-family: 'FontAwesome';
+                        display: inline-block;
+                        margin-right: 10px;
+                    }
+                  }
+                  &:checked{
+                      &+label{
+                        &:before{
+                            content:"\f05d";
+                            color:#34da67;
+                            font-family:'FontAwesome';
+                            display: inline-block;
+                        }
+                      }
+                  }
                 }
               }
               button{
