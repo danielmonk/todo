@@ -1,0 +1,95 @@
+body {
+  background: #5031a9;
+  height: 100vh; }
+  body header {
+    padding: 15px 0; }
+    body header .logo {
+      max-width: 175px; }
+  body #intro .title {
+    color: #fff;
+    text-align: center; }
+  body #list {
+    /* Heading */
+    /* New Task */
+    /* Task list */
+    /* Completed */
+    /* Edit Task */ }
+    body #list ul {
+      margin: 0;
+      padding: 0; }
+    body #list li * {
+      float: left; }
+    body #list li, body #list h3 {
+      clear: both;
+      list-style: none; }
+    body #list input, body #list button {
+      outline: none; }
+    body #list button {
+      background: #fff;
+      color: #a1a1a1;
+      font-size: 15px;
+      margin: 0 10px;
+      font-family: Lato, sans-serif;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+      padding: 14px 28px;
+      transition: ease 0.5s; }
+      body #list button:hover {
+        color: #fff;
+        transition: ease 0.5s; }
+    body #list h3,
+    body #list label[for='new-task'] {
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 30px 0 10px;
+      margin: 0;
+      text-transform: uppercase; }
+    body #list input[type="text"] {
+      margin: 0;
+      font-size: 18px;
+      line-height: 18px;
+      padding: 10px;
+      background: #fff;
+      border-radius: 6px;
+      font-family: Lato, sans-serif;
+      color: #888; }
+    body #list input[type="text"]:focus {
+      color: #333; }
+    body #list label[for='new-task'] {
+      display: block;
+      margin: 0 0 20px; }
+    body #list input#new-task {
+      float: left; }
+    body #list p > button:hover {
+      color: #0FC57C; }
+    body #list li {
+      overflow: hidden;
+      padding: 20px 0; }
+      body #list li > input[type="checkbox"] {
+        margin: 0 10px;
+        position: relative;
+        top: 15px; }
+      body #list li > label {
+        font-size: 18px;
+        line-height: 40px;
+        padding: 0 0 0 11px;
+        color: #fff; }
+      body #list li > .delete {
+        background-color: #CF2323;
+        padding: 22px;
+        margin: 0 5px; }
+        body #list li > .delete:before, body #list li > .delete:after {
+          background-color: #fff; }
+        body #list li > .delete:hover {
+          background-color: #00FF00; }
+    body #list #completed-tasks label {
+      text-decoration: line-through;
+      color: #00FF00; }
+    body #list ul li input[type=text] {
+      display: none; }
+    body #list ul li.editMode input[type=text] {
+      display: block; }
+    body #list ul li.editMode label {
+      display: none; }
